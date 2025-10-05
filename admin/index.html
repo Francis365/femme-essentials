@@ -8,6 +8,15 @@
 </head>
 
 <body>
+  <!-- Force Decap to load config from /admin/config.yml even if the page is served at /admin (no trailing slash) -->
+  <script>
+    window.CMS_CONFIG_PATH = "/admin/config.yml";
+    (function () {
+      // optional: normalize URL to /admin/ to keep relative paths sane
+      if (location.pathname === "/admin") location.replace("/admin/");
+    })();
+  </script>
+
   <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
