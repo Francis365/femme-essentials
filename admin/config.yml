@@ -40,6 +40,7 @@ collections:
                 name: "image"
                 widget: "image"
                 allow_multiple: false
+                required: false
                 hint: "Upload/select image; filename will be auto-derived."
               - label: "Filename (optional)"
                 name: "filename"
