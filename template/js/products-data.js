@@ -1,4 +1,4 @@
-// Auto-generated list of product image filenames from shared_images
+// Auto-generated list of product image filenames from shared_images_optimized/thumbs
 // We will assign categories and names in products.js
 var PRODUCTS_FILENAMES = [
   "IMG_20250929_100606.jpg",

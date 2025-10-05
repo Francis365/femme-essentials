@@ -116,7 +116,7 @@
   }
 
   function productCardHtml(p) {
-    return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + (p.thumb || p.image) + '" onerror="this.onerror=null;this.src=\'' + ('shared_images/' + p.filename) + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">$' + p.price + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
+    return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + (p.thumb || p.image) + '" onerror="this.onerror=null;this.src=\'' + ('shared_images_optimized/thumbs/' + p.filename) + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">$' + p.price + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
   }
 
   function renderGrid(containerId, products) {
@@ -160,8 +160,8 @@
       return;
     }
     var container = document.getElementById('product-detail');
-    var fullSrc = p.image || ('shared_images/' + p.filename);
-    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + fullSrc + '" onerror="this.onerror=null;this.src=\'' + ('shared_images/' + p.filename) + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">$' + p.price + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
+    var fullSrc = p.image || ('shared_images_optimized/thumbs/' + p.filename);
+    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + fullSrc + '" onerror="this.onerror=null;this.src=\'' + ('shared_images_optimized/thumbs/' + p.filename) + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">$' + p.price + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
       '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
       '<a href="tel:+15551234567">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
   }

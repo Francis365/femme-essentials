@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Femme Essentials - Product Review & Curation</title>
@@ -7,11 +8,26 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <style>
-    .thumb { width: 160px; height: 160px; object-fit: cover; }
-    .sticky-actions { position: sticky; top: 0; background: #fff; z-index: 10; padding: .75rem 0; }
-    textarea.form-control { min-height: 80px; }
+    .thumb {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .sticky-actions {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+      padding: .75rem 0;
+    }
+
+    textarea.form-control {
+      min-height: 80px;
+    }
   </style>
 </head>
+
 <body class="container py-3">
   <div class="sticky-actions d-flex align-items-center gap-2">
     <h4 class="me-auto mb-0">Product Review & Curation</h4>
@@ -23,15 +39,15 @@
 
   <script src="js/products-data.js"></script>
   <script>
-  const CATEGORIES = ["Wigs","Perfume","Body Lotion","Soap","Skin Care","Makeup","Accessories"];
+    const CATEGORIES = ["Wigs", "Perfume", "Body Lotion", "Soap", "Skin Care", "Makeup", "Accessories"];
 
-  function createRow(fname, idx){
-    const wrap = document.createElement('div');
-    wrap.className = 'row g-3 align-items-start border-bottom py-3';
+    function createRow(fname, idx) {
+      const wrap = document.createElement('div');
+      wrap.className = 'row g-3 align-items-start border-bottom py-3';
 
-    wrap.innerHTML = `
+      wrap.innerHTML = `
       <div class="col-auto">
-        <img src="shared_images/${fname}" alt="${fname}" class="thumb rounded border">
+        <img src="shared_images_optimized/thumbs/${fname}" alt="${fname}" class="thumb rounded border">
       </div>
       <div class="col-md-2"><small class="text-muted">${fname}</small></div>
       <div class="col-md-2">
@@ -52,49 +68,49 @@
         </div>
       </div>`;
 
-    // defaults
-    wrap.querySelector('[name=category]').value = CATEGORIES[idx % CATEGORIES.length];
-    wrap.querySelector('[name=name]').value = `${CATEGORIES[idx % CATEGORIES.length]} – Item ${idx+1}`;
-    wrap.querySelector('[name=price]').value = (20 + (idx % 50)).toFixed(2);
+      // defaults
+      wrap.querySelector('[name=category]').value = CATEGORIES[idx % CATEGORIES.length];
+      wrap.querySelector('[name=name]').value = `${CATEGORIES[idx % CATEGORIES.length]} – Item ${idx + 1}`;
+      wrap.querySelector('[name=price]').value = (20 + (idx % 50)).toFixed(2);
 
-    wrap.dataset.filename = fname;
-    return wrap;
-  }
+      wrap.dataset.filename = fname;
+      return wrap;
+    }
 
-  function collect(){
-    const rows = [...document.querySelectorAll('#review-grid .row')];
-    return rows.map(r => ({
-      filename: r.dataset.filename,
-      category: r.querySelector('[name=category]').value,
-      name: r.querySelector('[name=name]').value.trim(),
-      description: r.querySelector('[name=description]').value.trim(),
-      price: parseFloat(r.querySelector('[name=price]').value || '0').toFixed(2)
-    }));
-  }
+    function collect() {
+      const rows = [...document.querySelectorAll('#review-grid .row')];
+      return rows.map(r => ({
+        filename: r.dataset.filename,
+        category: r.querySelector('[name=category]').value,
+        name: r.querySelector('[name=name]').value.trim(),
+        description: r.querySelector('[name=description]').value.trim(),
+        price: parseFloat(r.querySelector('[name=price]').value || '0').toFixed(2)
+      }));
+    }
 
-  function download(filename, text){
-    const a = document.createElement('a');
-    a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    a.setAttribute('download', filename);
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  }
+    function download(filename, text) {
+      const a = document.createElement('a');
+      a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      a.setAttribute('download', filename);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
 
-  function render(){
-    const grid = document.getElementById('review-grid');
-    PRODUCTS_FILENAMES.forEach((f, i) => grid.appendChild(createRow(f, i)));
-  }
+    function render() {
+      const grid = document.getElementById('review-grid');
+      PRODUCTS_FILENAMES.forEach((f, i) => grid.appendChild(createRow(f, i)));
+    }
 
-  document.getElementById('exportJson').addEventListener('click', () => {
-    download('products-curated.json', JSON.stringify(collect(), null, 2));
-  });
-  document.getElementById('exportJs').addEventListener('click', () => {
-    download('products-curated.js', 'window.PRODUCTS_CURATED = ' + JSON.stringify(collect(), null, 2) + ';\n');
-  });
+    document.getElementById('exportJson').addEventListener('click', () => {
+      download('products-curated.json', JSON.stringify(collect(), null, 2));
+    });
+    document.getElementById('exportJs').addEventListener('click', () => {
+      download('products-curated.js', 'window.PRODUCTS_CURATED = ' + JSON.stringify(collect(), null, 2) + ';\n');
+    });
 
-  render();
+    render();
   </script>
 </body>
-</html>
 
+</html>

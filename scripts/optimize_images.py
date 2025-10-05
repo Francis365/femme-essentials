@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Optimize images in shared_images/ into shared_images_optimized/{full,thumbs}
-- Full: max width 1200px, quality 80
+Create thumbs from shared_images_optimized/full into shared_images_optimized/thumbs
+- Full: expected max width 1200px, quality 80
 - Thumbs: max width 600px, quality 80
 Re-encodes as progressive JPEGs.
 Requires: Pillow
@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / 'shared_images'
+SRC = ROOT / 'shared_images_optimized' / 'full'
 DST = ROOT / 'shared_images_optimized'
 FULL = DST / 'full'
 THUMBS = DST / 'thumbs'
