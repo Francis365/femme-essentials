@@ -1,7 +1,14 @@
 (function () {
   // Display-only catalog configuration
   var CONTACT_EMAIL = "info@femme-essentials.com";
-  var CONTACT_PHONE = "+1 (555) 123-4567";
+  var CONTACT_PHONE = "+2348036114891";
+
+  // Currency config
+  var NAIRA_PER_USD = 1500; // Change if you want a different rate
+  function formatNaira(usdAmount) {
+    var n = Math.round(parseFloat(usdAmount || 0) * NAIRA_PER_USD);
+    return '₦' + n.toLocaleString('en-NG');
+  }
 
   // Expanded categories
   var CATEGORIES = ["Wigs", "Perfume", "Body Lotion", "Soap", "Skin Care", "Makeup", "Accessories"];
@@ -69,11 +76,11 @@
         name: c.name,
         category: c.category,
         description: c.description,
-        price: parseFloat(c.price).toFixed(2),
+        priceUsd: parseFloat(c.price),
         image: "shared_images_optimized/full/" + fname,
         thumb: "shared_images_optimized/thumbs/" + fname,
         // If optimized images are not present yet, fall back to original uploaded path
-        fallback: rawPath && rawPath.indexOf('/') !== -1 ? rawPath : (rawPath ? ("/shared_images/" + rawPath) : ''),
+        fallback: (function (r) { if (!r) return ''; if (r.indexOf('/') !== -1) return r.replace(/^\/+/, ''); return 'shared_images/' + r; })(rawPath),
         filename: fname
       };
     });
@@ -90,7 +97,7 @@
         name: nd.name,
         category: cat,
         description: nd.description,
-        price: priceFor(cat, idx + 7),
+        priceUsd: parseFloat(priceFor(cat, idx + 7)),
         image: "shared_images_optimized/full/" + fname,
         thumb: "shared_images_optimized/thumbs/" + fname,
         filename: fname
@@ -123,8 +130,9 @@
 
   function productCardHtml(p) {
     var primary = p.thumb || p.image;
-    var fallback = p.fallback || ('/shared_images/' + p.filename);
-    return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">$' + p.price + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
+    var fallback = p.fallback || ('shared_images/' + p.filename);
+    var priceHtml = formatNaira(p.priceUsd);
+    return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">' + priceHtml + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
   }
 
   function renderGrid(containerId, products) {
@@ -139,7 +147,7 @@
     banner.innerHTML = '<div class="alert alert-info mb-4">' +
       '<strong>Contact to purchase:</strong> ' +
       '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
-      '<a href="tel:+15551234567">' + CONTACT_PHONE + '</a>' +
+      '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>' +
       '</div>';
   }
 
@@ -169,10 +177,11 @@
     }
     var container = document.getElementById('product-detail');
     var fullSrc = p.image || ('shared_images_optimized/full/' + p.filename);
-    var fallback = p.fallback || ('/shared_images/' + p.filename);
-    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + fullSrc + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">$' + p.price + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
+    var fallback = p.thumb || p.fallback || ('shared_images/' + p.filename);
+    var priceHtml = formatNaira(p.priceUsd);
+    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + fullSrc + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
       '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
-      '<a href="tel:+15551234567">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
+      '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
   }
 
   document.addEventListener('DOMContentLoaded', function () {
