@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "filename": "test_image",
-      "image": "/shared_images/screenshot-2025-09-22-at-06.20.31.png",
-      "name": "Laptop Screen",
-      "category": "Wigs",
-      "description": "This is a laptop screen test",
-      "price": 100000
-    },
-    {
       "filename": "IMG_20250929_100606.jpg",
       "name": "Silky Lace Front Wigs",
       "category": "Wigs",
@@ -686,14 +678,6 @@
       "category": "Makeup",
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "31.00"
-    },
-    {
-      "image": "/shared_images/screenshot-2025-10-01-at-21.44.08.png",
-      "filename": "screenshot1",
-      "name": "THis is a screenshot test",
-      "category": "Wigs",
-      "description": "This is really working well",
-      "price": 100
     }
   ]
 }
