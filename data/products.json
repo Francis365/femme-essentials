@@ -1,6 +1,14 @@
 {
   "products": [
     {
+      "filename": "test_image",
+      "image": "/shared_images/lwscreenshot-2025-09-27-at-20.40.05.png",
+      "name": "Laptop Screen",
+      "category": "Wigs",
+      "description": "This is a laptop screen test",
+      "price": 100000
+    },
+    {
       "filename": "IMG_20250929_100606.jpg",
       "name": "Silky Lace Front Wigs",
       "category": "Wigs",
