@@ -133,7 +133,7 @@
     var primary = p.thumb || p.image;
     var fallback = p.fallback || ('shared_images/' + p.filename);
     var priceHtml = (p.priceNgn != null && isFinite(p.priceNgn)) ? formatNairaValue(p.priceNgn)
-      : (p.priceRaw != null && isFinite(p.priceRaw)) ? String(p.priceRaw)
+      : (p.priceRaw != null && isFinite(p.priceRaw)) ? formatNairaValue(p.priceRaw)
         : '';
     return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">' + priceHtml + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
   }
@@ -183,7 +183,7 @@
     // Prefer original/fallback first (most reliable for new uploads), then thumb
     var primary = p.fallback || p.thumb || ('shared_images/' + p.filename);
     var priceHtml = (p.priceNgn != null && isFinite(p.priceNgn)) ? formatNairaValue(p.priceNgn)
-      : (p.priceRaw != null && isFinite(p.priceRaw)) ? String(p.priceRaw)
+      : (p.priceRaw != null && isFinite(p.priceRaw)) ? formatNairaValue(p.priceRaw)
         : '';
     var fallbackSrc = (p.fallback || ('shared_images/' + p.filename));
     container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallbackSrc + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
