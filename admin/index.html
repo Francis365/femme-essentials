@@ -18,9 +18,6 @@
           window.netlifyIdentity.open('signup');
         }
       });
-      window.netlifyIdentity.on('login', function () {
-        document.location.href = '/admin/';
-      });
       window.netlifyIdentity.init();
     }
   </script>
