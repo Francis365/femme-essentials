@@ -12,8 +12,8 @@ backend:
 #   repo: Francis365/femme-essentials
 #   branch: main
 
-media_folder: "shared_images_optimized/thumbs"          # where uploads go in the repo
-public_folder: "/shared_images_optimized/thumbs"        # public path used by the site
+media_folder: "shared_images"          # where uploads go in the repo
+public_folder: "/shared_images"        # public path used by the site
 
 publish_mode: editorial_workflow         # optional: drafts/review/publish
 
@@ -36,7 +36,16 @@ collections:
             collapsed: true
             summary: "{{fields.name}} — ${{fields.price}} ({{fields.category}})"
             fields:
-              - { label: "Filename", name: "filename", widget: "string", hint: "Image basename, e.g. IMG_2025.jpg" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                allow_multiple: false
+                hint: "Upload/select image; filename will be auto-derived."
+              - label: "Filename (optional)"
+                name: "filename"
+                widget: "string"
+                required: false
+                hint: "Only needed if you prefer entering a basename manually."
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Category", name: "category", widget: "select", options: ["Wigs","Perfume","Body Lotion","Soap","Skin Care","Makeup","Accessories"] }
               - { label: "Description", name: "description", widget: "text" }
