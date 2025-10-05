@@ -232,6 +232,12 @@
     }
 }
 
+/* Improve hero left panel readability */
+.hero-header .hero-header-text {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
 .header-carousel .owl-nav {
     position: absolute;
     right: 0;
