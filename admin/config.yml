@@ -34,6 +34,7 @@ collections:
             name: "products"
             widget: "list"
             collapsed: true
+            add_to_top: true
             summary: "{{fields.name}} — ${{fields.price}} ({{fields.category}})"
             fields:
               - label: "Image"
