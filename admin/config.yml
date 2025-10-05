@@ -1,19 +1,17 @@
 local_backend: true
 
 # Choose ONE backend and configure it for your repo/host:
-# Netlify (Identity + Git Gateway)
+# GitHub backend + OAuth provider (recommended while Netlify is unavailable)
 backend:
-  name: git-gateway
+  name: github
+  repo: Francis365/femme-essentials
   branch: main
-
-# Alternative (GitHub backend + OAuth server):
-# backend:
-#   name: github
-#   repo: Francis365/femme-essentials
-#   branch: main
+  # After deploying oauth-provider/, set this to its public URL (no trailing slash)
+  # Example: https://femme-essentials-oauth.onrender.com
+  base_url: https://decap-oauth-provider-2l6t.onrender.com
 
 media_folder: "shared_images"          # where uploads go in the repo
-public_folder: "/shared_images"        # public path used by the site
+public_folder: "shared_images"        # public path used by the site
 
 publish_mode: editorial_workflow         # optional: drafts/review/publish
 
