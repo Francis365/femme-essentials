@@ -1,6 +1,14 @@
 {
   "products": [
     {
+      "image": "shared_images/screenshot-2025-09-12-at-17.11.06.png",
+      "filename": "phone",
+      "name": "phone",
+      "category": "Perfume",
+      "description": "This is a phone test",
+      "price_ngn": 3000
+    },
+    {
       "filename": "IMG_20250929_100606.jpg",
       "name": "Silky Lace Front Wigs",
       "category": "Wigs",
