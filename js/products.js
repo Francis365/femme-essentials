@@ -3,10 +3,9 @@
   var CONTACT_EMAIL = "info@femme-essentials.com";
   var CONTACT_PHONE = "+2348036114891";
 
-  // Currency config
-  var NAIRA_PER_USD = 1500; // Change if you want a different rate
-  function formatNaira(usdAmount) {
-    var n = Math.round(parseFloat(usdAmount || 0) * NAIRA_PER_USD);
+  // Currency display helper (no conversion). If NGN amount exists, format it; otherwise show raw numeric.
+  function formatNairaValue(ngnAmount) {
+    var n = Math.round(parseFloat(ngnAmount || 0));
     return '₦' + n.toLocaleString('en-NG');
   }
 
@@ -76,7 +75,8 @@
         name: c.name,
         category: c.category,
         description: c.description,
-        priceUsd: parseFloat(c.price),
+        priceNgn: (c.price_ngn != null && String(c.price_ngn).trim() !== '') ? parseFloat(c.price_ngn) : null,
+        priceRaw: (c.price != null && String(c.price).trim() !== '') ? parseFloat(c.price) : null,
         image: "shared_images_optimized/full/" + fname,
         thumb: "shared_images_optimized/thumbs/" + fname,
         // If optimized images are not present yet, fall back to original uploaded path
@@ -97,7 +97,8 @@
         name: nd.name,
         category: cat,
         description: nd.description,
-        priceUsd: parseFloat(priceFor(cat, idx + 7)),
+        priceNgn: null,
+        priceRaw: parseFloat(priceFor(cat, idx + 7)),
         image: "shared_images_optimized/full/" + fname,
         thumb: "shared_images_optimized/thumbs/" + fname,
         filename: fname
@@ -131,7 +132,9 @@
   function productCardHtml(p) {
     var primary = p.thumb || p.image;
     var fallback = p.fallback || ('shared_images/' + p.filename);
-    var priceHtml = formatNaira(p.priceUsd);
+    var priceHtml = (p.priceNgn != null && isFinite(p.priceNgn)) ? formatNairaValue(p.priceNgn)
+      : (p.priceRaw != null && isFinite(p.priceRaw)) ? String(p.priceRaw)
+        : '';
     return '\n<div class="col-sm-6 col-md-4 col-lg-3 mb-4">\n  <div class="card h-100 shadow-sm">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" class="card-img-top" alt="' + p.name + '">\n    <div class="card-body d-flex flex-column">\n      <h6 class="text-primary text-uppercase mb-1">' + p.category + '</h6>\n      <h5 class="card-title">' + p.name + '</h5>\n      <div class="h5 text-dark mb-2">' + priceHtml + '</div>\n      <p class="card-text small flex-grow-1">' + p.description + '</p>\n      <a href="product-detail.html?id=' + p.id + '" class="btn btn-primary mt-auto">View Details</a>\n    </div>\n  </div>\n</div>';
   }
 
@@ -177,11 +180,18 @@
     }
     var container = document.getElementById('product-detail');
     var fullSrc = p.image || ('shared_images_optimized/full/' + p.filename);
-    var fallback = p.thumb || p.fallback || ('shared_images/' + p.filename);
-    var priceHtml = formatNaira(p.priceUsd);
-    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + fullSrc + '" onerror="this.onerror=null;this.src=\'' + fallback + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
+    var primary = p.thumb || p.fallback || ('shared_images/' + p.filename);
+    var priceHtml = (p.priceNgn != null && isFinite(p.priceNgn)) ? formatNairaValue(p.priceNgn)
+      : (p.priceRaw != null && isFinite(p.priceRaw)) ? String(p.priceRaw)
+        : '';
+    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + primary + '" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
       '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
       '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
+    // Try to upgrade to full image if it exists
+    var imgEl = container.querySelector('.product-detail-img');
+    var probe = new Image();
+    probe.onload = function () { imgEl.src = fullSrc; };
+    probe.src = fullSrc;
   }
 
   document.addEventListener('DOMContentLoaded', function () {
