@@ -1,0 +1,44 @@
+local_backend: true
+
+# Choose ONE backend and configure it for your repo/host:
+# 1) GitHub (recommended if your code is on GitHub)
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO  # TODO: set this
+  branch: main                          # or 'master'
+
+# Alternative (Netlify Identity + Git Gateway):
+# backend:
+#   name: git-gateway
+#   branch: main
+
+media_folder: "shared_images"          # where uploads go in the repo
+public_folder: "/shared_images"        # public path used by the site
+
+publish_mode: editorial_workflow         # optional: drafts/review/publish
+
+collections:
+  - name: "catalog"
+    label: "Product Catalog"
+    label_singular: "Product"
+    editor:
+      preview: false
+    files:
+      - file: "data/products.json"
+        label: "Products"
+        name: "products"
+        format: json
+        description: "List of products used across the site"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.name}} — ${{fields.price}} ({{fields.category}})"
+            fields:
+              - { label: "Filename", name: "filename", widget: "string", hint: "Image basename, e.g. IMG_2025.jpg" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["Wigs","Perfume","Body Lotion","Soap","Skin Care","Makeup","Accessories"] }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01 }
+
