@@ -77,8 +77,8 @@
         description: c.description,
         priceNgn: (c.price_ngn != null && String(c.price_ngn).trim() !== '') ? parseFloat(c.price_ngn) : null,
         priceRaw: (c.price != null && String(c.price).trim() !== '') ? parseFloat(c.price) : null,
-        image: "shared_images_optimized/full/" + fname,
-        thumb: "shared_images_optimized/thumbs/" + fname,
+        image: "shared_images/" + fname,
+        thumb: "shared_images/" + fname,
         // If optimized images are not present yet, fall back to original uploaded path
         fallback: (function (r) { if (!r) return ''; if (r.indexOf('/') !== -1) return r.replace(/^\/+/, ''); return 'shared_images/' + r; })(rawPath),
         filename: fname
@@ -99,8 +99,8 @@
         description: nd.description,
         priceNgn: null,
         priceRaw: parseFloat(priceFor(cat, idx + 7)),
-        image: "shared_images_optimized/full/" + fname,
-        thumb: "shared_images_optimized/thumbs/" + fname,
+        image: "shared_images/" + fname,
+        thumb: "shared_images/" + fname,
         filename: fname
       };
     });
@@ -179,19 +179,17 @@
       return;
     }
     var container = document.getElementById('product-detail');
-    var fullSrc = p.image || ('shared_images_optimized/full/' + p.filename);
-    var primary = p.thumb || p.fallback || ('shared_images/' + p.filename);
+
+    // Prefer original/fallback first (most reliable for new uploads), then thumb
+    var primary = p.fallback || p.thumb || ('shared_images/' + p.filename);
     var priceHtml = (p.priceNgn != null && isFinite(p.priceNgn)) ? formatNairaValue(p.priceNgn)
       : (p.priceRaw != null && isFinite(p.priceRaw)) ? String(p.priceRaw)
         : '';
-    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + primary + '" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
+    var fallbackSrc = (p.fallback || ('shared_images/' + p.filename));
+    container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallbackSrc + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
       '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
       '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
-    // Try to upgrade to full image if it exists
-    var imgEl = container.querySelector('.product-detail-img');
-    var probe = new Image();
-    probe.onload = function () { imgEl.src = fullSrc; };
-    probe.src = fullSrc;
+
   }
 
   document.addEventListener('DOMContentLoaded', function () {
