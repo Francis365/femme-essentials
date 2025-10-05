@@ -13,12 +13,13 @@
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', function (user) {
-        // If coming from an invite link, the widget will show a signup to set password
-        if (!user) {
-          window.netlifyIdentity.on('login', function () {
-            document.location.href = '/admin/';
-          });
+        // If this is an invite link, open the signup dialog to set a password
+        if (!user && /invite_token=/.test(window.location.hash)) {
+          window.netlifyIdentity.open('signup');
         }
+      });
+      window.netlifyIdentity.on('login', function () {
+        document.location.href = '/admin/';
       });
       window.netlifyIdentity.init();
     }
