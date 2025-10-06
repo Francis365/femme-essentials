@@ -33,7 +33,7 @@ collections:
             widget: "list"
             collapsed: true
             add_to_top: true
-            summary: "{{fields.name}} — ₦{{fields.price_ngn}}{{fields.price}} ({{fields.category}})"
+            summary: "{{fields.name}} — ₦{{fields.price_ngn}} ({{fields.category}})"
             fields:
               - label: "Image"
                 name: "image"
