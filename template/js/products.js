@@ -1,6 +1,6 @@
 (function () {
   // Categories for Femme Essentials catalog
-  var CATEGORIES = ["Wigs", "Perfumes", "Skin Care", "Makeup", "Accessories", "Hair Care",];
+  var CATEGORIES = ["Wigs", "Hair Care", "Perfumes", "Skin Care", "Makeup", "Accessories"];
 
   function buildProducts() {
     var products = PRODUCTS_FILENAMES.map(function (fname, idx) {
@@ -83,4 +83,3 @@
     if (document.getElementById('product-detail')) initDetail();
   });
 })();
-
