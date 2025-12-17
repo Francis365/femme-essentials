@@ -29,11 +29,12 @@
     },
     {
       "filename": "IMG_20250929_101044.jpg",
-      "name": "Youth & Lace",
+      "name": "Youth & Lace 18\"",
       "category": "Wigs",
       "description": "Master Mis, Best choice",
       "price": "16.00",
-      "image": "shared_images/IMG_20250929_101044.jpg"
+      "image": "shared_images/IMG_20250929_101044.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101232.jpg",
@@ -49,7 +50,8 @@
       "category": "Wigs",
       "description": "Chemical Fiber 16''. Best Quality",
       "price": "40.00",
-      "image": "shared_images/IMG_20250929_101339.jpg"
+      "image": "shared_images/IMG_20250929_101339.jpg",
+      "price_ngn": 28000
     },
     {
       "filename": "IMG_20250929_101436.jpg",
@@ -157,11 +159,12 @@
     },
     {
       "filename": "IMG_20250929_101700_1.jpg",
-      "name": "Essential Vitamin E",
-      "category": "Body Lotion",
-      "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
+      "name": "ĽUÔDAIS",
+      "category": "Accessories",
+      "description": "Hair Repair & Scalp Oil Serum",
       "price": "25.00",
-      "image": "shared_images/IMG_20250929_101700_1.jpg"
+      "image": "shared_images/IMG_20250929_101700_1.jpg",
+      "price_ngn": 1800
     },
     {
       "filename": "IMG_20250929_101707.jpg",
@@ -746,14 +749,6 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "31.00",
       "image": "shared_images/IMG_20250929_103854.jpg"
-    },
-    {
-      "image": "/shared_images/screenshot-2025-10-01-at-21.44.08.png",
-      "filename": "screenshot1",
-      "name": "THis is a screenshot test",
-      "category": "Wigs",
-      "description": "This is really working well",
-      "price": 100
     }
   ]
 }
