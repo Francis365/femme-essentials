@@ -10,7 +10,7 @@
 <body>
   <!-- Manual init to avoid YAML content-type issues on host -->
   <script>
-    window.CMS_MANUAL_INIT = true;
+    // window.CMS_MANUAL_INIT = true;
     (function () {
       // optional: normalize URL to /admin/ to keep relative paths sane
       if (location.pathname === "/admin") location.replace("/admin/");
@@ -20,6 +20,7 @@
   <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
+  <!-- 
   <script>
     // Initialize Decap CMS with inline config to avoid fetching config.yml with wrong content-type
     CMS.init({
@@ -73,6 +74,7 @@
       }
     });
   </script>
+  -->
 
 </body>
 
