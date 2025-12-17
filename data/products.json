@@ -2,11 +2,12 @@
   "products": [
     {
       "filename": "IMG_20250929_100606.jpg",
-      "name": "Silky Lace Front Wigs",
+      "name": "Joy Reap",
       "category": "Wigs",
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "46.00",
-      "image": "shared_images/IMG_20250929_100606.jpg"
+      "image": "shared_images/IMG_20250929_100606.jpg",
+      "price_ngn": 35000
     },
     {
       "filename": "IMG_20250929_100730.jpg",
@@ -22,7 +23,8 @@
       "category": "Body Lotion",
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "21.00",
-      "image": "shared_images/IMG_20250929_100911.jpg"
+      "image": "shared_images/IMG_20250929_100911.jpg",
+      "price_ngn": 50000
     },
     {
       "filename": "IMG_20250929_101044.jpg",
