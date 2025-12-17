@@ -1,6 +1,6 @@
 (function () {
   // Categories for Femme Essentials catalog
-  var CATEGORIES = ["Wigs", "Perfumes", "Skin Care", "Makeup", "Accessories"];
+  var CATEGORIES = ["Wigs", "Perfumes", "Skin Care", "Makeup", "Accessories", "Hair Care",];
 
   function buildProducts() {
     var products = PRODUCTS_FILENAMES.map(function (fname, idx) {
