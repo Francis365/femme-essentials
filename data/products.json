@@ -42,7 +42,8 @@
       "category": "Wigs",
       "description": "Premiuim Quality, 100% Human hair",
       "price": "53.00",
-      "image": "shared_images/IMG_20250929_101232.jpg"
+      "image": "shared_images/IMG_20250929_101232.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101339.jpg",
@@ -55,40 +56,44 @@
     },
     {
       "filename": "IMG_20250929_101436.jpg",
-      "name": "Silky Charcoal",
-      "category": "Soap",
+      "name": "Wig",
+      "category": "Wigs",
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "10.00",
-      "image": "shared_images/IMG_20250929_101436.jpg"
+      "image": "shared_images/IMG_20250929_101436.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101442.jpg",
-      "name": "Premium Hydrating Cream",
-      "category": "Skin Care",
+      "name": "Wig",
+      "category": "Wigs",
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "33.00",
-      "image": "shared_images/IMG_20250929_101442.jpg"
+      "image": "shared_images/IMG_20250929_101442.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101444.jpg",
-      "name": "Deluxe Velvet Foundation",
-      "category": "Makeup",
+      "name": "Wig",
+      "category": "Wigs",
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "28.00",
-      "image": "shared_images/IMG_20250929_101444.jpg"
+      "image": "shared_images/IMG_20250929_101444.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101546.jpg",
-      "name": "Essential Bonnet",
+      "name": "---",
       "category": "Accessories",
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "25.00",
-      "image": "shared_images/IMG_20250929_101546.jpg"
+      "image": "shared_images/IMG_20250929_101546.jpg",
+      "price_ngn": ""
     },
     {
       "filename": "IMG_20250929_101553.jpg",
-      "name": "Signature Kinky Curly Wig",
-      "category": "Wigs",
+      "name": "---",
+      "category": "Accessories",
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "60.00",
       "image": "shared_images/IMG_20250929_101553.jpg"
