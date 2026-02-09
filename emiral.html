@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Emiral - Natural Health & Wellness Products | FemmeEssencia</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Emiral, natural health products, herbal supplements, immune booster, ulcer elixir, detox tea"
+        name="keywords">
+    <meta
+        content="Discover Emiral - 100% natural health products that support treatment of various conditions including ulcer, diabetes, high blood pressure, and more. NAFDAC Approved."
+        name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Emiral Custom Styles -->
+    <style>
+        :root {
+            --emiral-green: #1a8f3c;
+            --emiral-green-dark: #0d6b2a;
+            --emiral-green-light: #2ecc71;
+            --emiral-gold: #d4af37;
+        }
+
+        /* Hero Section */
+        .emiral-hero {
+            background: linear-gradient(135deg, #0a4d1c 0%, #1a8f3c 50%, #0d6b2a 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+        }
+
+        .emiral-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        .emiral-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero-brand {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 3px;
+        }
+
+        .hero-tagline {
+            color: var(--emiral-gold);
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .crown-icon {
+            color: var(--emiral-gold);
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .nafdac-badge {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 15px 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .natural-badge {
+            background: linear-gradient(135deg, var(--emiral-green-light), var(--emiral-green));
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Media Gallery */
+        .media-gallery {
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+        }
+
+        .gallery-main-img {
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-main-img:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-thumb {
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            opacity: 0.7;
+        }
+
+        .gallery-thumb:hover,
+        .gallery-thumb.active {
+            border-color: var(--emiral-green);
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, #0a4d1c 0%, #1a8f3c 100%);
+            position: relative;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--emiral-gold), #f4d03f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.8rem;
+        }
+
+        .benefit-card h5 {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Products Section */
+        .products-section {
+            background: #fff;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card-img {
+            height: 200px;
+            object-fit: contain;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+        }
+
+        .product-card-body {
+            padding: 25px;
+        }
+
+        .product-tag {
+            background: linear-gradient(135deg, var(--emiral-green), var(--emiral-green-light));
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Ingredients Section */
+        .ingredients-section {
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+        }
+
+        .ingredient-item {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .ingredient-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .ingredient-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a8f3c' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .btn-emiral {
+            background: linear-gradient(135deg, var(--emiral-green), var(--emiral-green-light));
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(26, 143, 60, 0.4);
+        }
+
+        .btn-emiral:hover {
+            background: linear-gradient(135deg, var(--emiral-green-light), var(--emiral-green));
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(26, 143, 60, 0.5);
+        }
+
+        .btn-emiral-outline {
+            background: transparent;
+            color: var(--emiral-green);
+            border: 2px solid var(--emiral-green);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-emiral-outline:hover {
+            background: var(--emiral-green);
+            color: #fff;
+        }
+
+        /* Dosage Info */
+        .dosage-card {
+            background: linear-gradient(135deg, var(--emiral-gold), #f4d03f);
+            border-radius: 20px;
+            padding: 30px;
+            color: #1a1a1a;
+        }
+
+        /* Floating leaves animation */
+        .floating-leaf {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.1);
+            animation: floatLeaf 15s ease-in-out infinite;
+        }
+
+        @keyframes floatLeaf {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.1;
+            }
+        }
+
+        /* Section headers */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--emiral-green), var(--emiral-green-light));
+            border-radius: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-brand {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+
+            .emiral-hero {
+                min-height: auto;
+                padding-bottom: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light sticky-top p-0">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.html" class="navbar-brand bg-primary py-4 px-5 me-0">
+                <h1 class="mb-0"><i class="bi bi-scissors"></i>FemmeEssencia</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="products.html" class="nav-item nav-link">Products</a>
+                    <a href="emiral.html" class="nav-item nav-link active">Emiral</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex">
+                    <a class="btn btn-primary btn-sm-square" href="https://www.tiktok.com/@femmeessencia"
+                        target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="emiral-hero py-5">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center min-vh-75 py-5">
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+                    <div class="mb-3">
+                        <i class="fas fa-crown crown-icon"></i>
+                    </div>
+                    <h1 class="hero-brand mb-3 animated fadeInDown">EMIRAL</h1>
+                    <p class="hero-tagline mb-4 animated fadeInUp" style="animation-delay: 0.3s;">Natural. Health. Tech
+                        & Wealth</p>
+                    <p class="text-white fs-5 mb-4 animated fadeInUp" style="animation-delay: 0.5s;">
+                        Be part of the next big wave in wellness and wealth creation. Experience the miracle in a
+                        bottle.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 mb-5 animated fadeInUp"
+                        style="animation-delay: 0.7s;">
+                        <div class="nafdac-badge">
+                            <div>
+                                <small class="text-muted d-block">NAFDAC APPROVED</small>
+                                <strong class="text-dark fs-5">A7-101407L</strong>
+                            </div>
+                            <div class="natural-badge">
+                                <span style="font-size: 1.2rem;">100%</span>
+                                <small style="font-size: 0.6rem;">NATURAL</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 animated fadeInUp"
+                        style="animation-delay: 0.9s;">
+                        <a href="#products" class="btn btn-emiral">Explore Products</a>
+                        <a href="#benefits" class="btn btn-light px-4 py-3 rounded-pill">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 animated fadeInRight" style="animation-delay: 0.5s;">
+                    <img src="img/emiral_img_1.jpeg" alt="Emiral Product Line" class="img-fluid gallery-main-img w-100">
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating decorations -->
+        <i class="fas fa-leaf floating-leaf" style="top: 20%; left: 5%;"></i>
+        <i class="fas fa-leaf floating-leaf" style="top: 60%; left: 10%; animation-delay: 3s;"></i>
+        <i class="fas fa-leaf floating-leaf" style="top: 40%; right: 5%; animation-delay: 5s;"></i>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Media Gallery Section Start -->
+    <section class="media-gallery py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary fw-bold mb-2">Gallery</h6>
+                <h2 class="display-5 fw-bold section-heading">Discover Emiral</h2>
+                <p class="text-muted mt-4">The Elixir of Life - Miracle in a Bottle</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Main Display -->
+                <div class="col-lg-8">
+                    <div class="position-relative">
+                        <img id="mainGalleryImage" src="img/emiral_img_3.jpeg" alt="Emiral Benefits"
+                            class="img-fluid gallery-main-img w-100">
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="col-lg-4">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="img/emiral_img_1.jpeg" alt="Emiral Products" class="img-fluid gallery-thumb w-100"
+                                onclick="changeMainImage(this.src)" style="height: 150px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/emiral_img_2.jpeg" alt="Ulcer Elixir" class="img-fluid gallery-thumb w-100"
+                                onclick="changeMainImage(this.src)" style="height: 150px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/emiral_img_3.jpeg" alt="Emiral Benefits"
+                                class="img-fluid gallery-thumb active w-100" onclick="changeMainImage(this.src)"
+                                style="height: 150px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <div class="video-wrapper h-100" style="min-height: 150px;">
+                                <video controls poster="img/emiral_img_1.jpeg"
+                                    style="height: 150px; object-fit: cover; width: 100%;">
+                                    <source src="video/emiral_vid.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dosage Card -->
+                    <div class="dosage-card mt-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="fas fa-prescription-bottle-alt fa-2x"></i>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Recommended Dosage</h5>
+                                <p class="mb-0 fs-5">45mls twice daily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Media Gallery Section End -->
+
+    <!-- Benefits Section Start -->
+    <section id="benefits" class="benefits-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-warning fw-bold mb-2">Health Benefits</h6>
+                <h2 class="display-5 fw-bold text-white mb-4">Why You Need Emiral</h2>
+                <p class="text-white-50 col-lg-8 mx-auto">
+                    Emiral products harness the healing power of nature, combining ancient wisdom and modern science to
+                    support your body's innate healing abilities.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-stomach"></i></div>
+                        <h5>Ulcer</h5>
+                        <p>Supports digestive health</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h5>High Blood Pressure</h5>
+                        <p>Cardiovascular support</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-tint"></i></div>
+                        <h5>Diabetes</h5>
+                        <p>Blood sugar balance</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                        <h5>Stroke</h5>
+                        <p>Neurological wellness</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h5>Immune Boost</h5>
+                        <p>Strengthens immunity</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-lungs"></i></div>
+                        <h5>Infections</h5>
+                        <p>Anti-fungal & anti-bacterial</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-venus"></i></div>
+                        <h5>Fibroid</h5>
+                        <p>Women's health support</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-spa"></i></div>
+                        <h5>Anti-Aging</h5>
+                        <p>Reverses & slows aging</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-liver"></i></div>
+                        <h5>Liver & Kidney</h5>
+                        <p>Organ detoxification</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-male"></i></div>
+                        <h5>Prostate</h5>
+                        <p>Men's health support</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-head-side-virus"></i></div>
+                        <h5>Epilepsy</h5>
+                        <p>Neurological balance</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="benefit-card h-100">
+                        <div class="benefit-icon"><i class="fas fa-cookie-bite"></i></div>
+                        <h5>Food Poisoning</h5>
+                        <p>Neutralizes toxins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-white-50 fst-italic">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Supports treatment of many diseases yet to be documented
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Benefits Section End -->
+
+    <!-- Products Section Start -->
+    <section id="products" class="products-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary fw-bold mb-2">Our Products</h6>
+                <h2 class="display-5 fw-bold section-heading">The Emiral Product Line</h2>
+                <p class="text-muted mt-4 col-lg-8 mx-auto">
+                    Each Emiral product is carefully formulated with 100% natural ingredients to target specific health
+                    needs.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Ulcer Elixir -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <img src="img/emiral_img_2.jpeg" alt="Emiral Ulcer Elixir" class="product-card-img w-100">
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Best Seller</span>
+                            <h4 class="fw-bold text-dark">Ulcer Elixir</h4>
+                            <p class="text-muted">A herbal supplement that harnesses the healing power of nature.
+                                Combines ancient wisdom and modern science to support digestive health and healing.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Digestive Support</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Immune Boost</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Natural Healing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detox Tea -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-card-img w-100 d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #f8d7da, #fff5f5);">
+                            <i class="fas fa-mug-hot fa-5x" style="color: #c0392b;"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Tea</span>
+                            <h4 class="fw-bold text-dark">Detox Tea</h4>
+                            <p class="text-muted">Rejuvenate your cells with our premium detox blend. Cleanses the body,
+                                reduces inflammation, and strengthens your immune system naturally.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Body Cleansing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Inflammation Reduction</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cellular Health</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BP Balance Tea -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-card-img w-100 d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+                            <i class="fas fa-heart fa-5x" style="color: #e74c3c;"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Tea</span>
+                            <h4 class="fw-bold text-dark">BP Balance Tea</h4>
+                            <p class="text-muted">Specially formulated to support healthy blood pressure levels. A
+                                natural approach to cardiovascular wellness and heart health.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Blood Pressure Support</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Heart Health</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Circulation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desire Tea -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-card-img w-100 d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #fce4ec, #f8bbd9);">
+                            <i class="fas fa-fire fa-5x" style="color: #c2185b;"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Vitality</span>
+                            <h4 class="fw-bold text-dark">Desire Tea</h4>
+                            <p class="text-muted">Fuel your passions with this vitality-boosting blend. Enhances energy,
+                                stamina, and overall wellness for an active lifestyle.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Energy Boost</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Enhanced Vitality</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Stamina Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleanse Elixir -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-card-img w-100 d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                            <i class="fas fa-leaf fa-5x" style="color: #4caf50;"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Elixir</span>
+                            <h4 class="fw-bold text-dark">Cleanse Elixir</h4>
+                            <p class="text-muted">Natural internal body cleanse for optimal wellness. Supports digestive
+                                health, boosts metabolism, and promotes internal balance.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Internal Cleansing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Metabolic Support</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Body Balance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Elixir -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-card-img w-100 d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                            <i class="fas fa-flask fa-5x" style="color: #1976d2;"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-tag mb-3 d-inline-block">Elixir</span>
+                            <h4 class="fw-bold text-dark">Emiral Elixir</h4>
+                            <p class="text-muted">The flagship natural immune booster. 100% natural ingredients
+                                carefully chosen for their potent healing properties and wellness benefits.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check text-success me-2"></i>Immune Support</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Overall Wellness</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Natural Healing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section End -->
+
+    <!-- Ingredients Section Start -->
+    <section class="ingredients-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-uppercase text-primary fw-bold mb-2">Key Ingredients</h6>
+                <h2 class="display-5 fw-bold section-heading">Nature's Finest</h2>
+                <p class="text-muted mt-4 col-lg-8 mx-auto">
+                    Every Emiral product contains a proprietary blend of concentrated herbs and nutrients carefully
+                    chosen for their potent healing properties.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4 class="fw-bold">Licorice Root</h4>
+                        <p class="text-muted small mb-0">(Special Variety from Asia & Egypt)</p>
+                        <p class="text-muted mt-3">Historically used by Pharaohs for vitality, longevity, and disease
+                            resistance. A powerful adaptogen that supports overall health.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍃</div>
+                        <h4 class="fw-bold">Carica Papaya</h4>
+                        <p class="text-muted small mb-0">(Papaya Leaf Extract)</p>
+                        <p class="text-muted mt-3">Supports digestion, reduces inflammation, and strengthens immunity.
+                            Rich in enzymes and antioxidants for optimal health.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍂</div>
+                        <h4 class="fw-bold">Morinda Citrifolia</h4>
+                        <p class="text-muted small mb-0">(Noni Fruit)</p>
+                        <p class="text-muted mt-3">Rich in essential nutrients that detoxify the body and enhance
+                            cellular health. Known for its powerful healing properties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ingredients Section End -->
+
+    <!-- Video Feature Section -->
+    <section class="py-5 bg-dark">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="video-wrapper">
+                        <video controls playsinline poster="img/emiral_img_1.jpeg" class="w-100"
+                            style="border-radius: 20px;">
+                            <source src="video/emiral_vid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h6 class="text-uppercase text-primary fw-bold mb-2">Watch & Learn</h6>
+                    <h2 class="display-6 fw-bold text-white mb-4">See Emiral in Action</h2>
+                    <p class="text-white-50 mb-4">
+                        Discover how Emiral products are transforming lives. Watch real testimonials and learn about the
+                        science behind our natural health solutions.
+                    </p>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>100% Natural Ingredients
+                        </li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>NAFDAC Approved &
+                            Certified</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Thousands of Satisfied
+                            Customers</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Science-Backed
+                            Formulations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Feature Section End -->
+
+    <!-- CTA Section Start -->
+    <section class="cta-section py-5">
+        <div class="container py-5 position-relative" style="z-index: 1;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold text-white mb-4">Ready to Transform Your Health?</h2>
+                    <p class="text-white-50 fs-5 mb-5">
+                        Join thousands of satisfied customers who have discovered the power of Emiral natural health
+                        products. Your journey to wellness starts here.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-emiral">Contact Us Now</a>
+                        <a href="https://www.emiralglobal.com" target="_blank" rel="noopener"
+                            class="btn btn-outline-light px-4 py-3 rounded-pill">
+                            <i class="fas fa-globe me-2"></i>Visit Official Website
+                        </a>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-top border-secondary">
+                        <p class="text-white-50 mb-3">Connect with Emiral Global</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-outline-light btn-lg-square rounded-circle"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-lg-square rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-light btn-lg-square rounded-circle"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 pe-lg-5">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="display-5 text-primary mb-0"><i class="bi bi-scissors"></i>FemmeEssencia</h1>
+                    </a>
+                    <p class="mt-3">Your trusted source for premium health and wellness products including the complete
+                        Emiral product line.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i>Lagos, Nigeria</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-2"></i>+2348028476858</p>
+                    <p><i class="fa fa-envelope me-2"></i>info@femme-essentials.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-sm-square btn-primary" href="https://www.tiktok.com/@femmeessencia"
+                            target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <h5 class="text-primary mb-4">Quick Links</h5>
+                            <a class="btn btn-link" href="index.html">Home</a>
+                            <a class="btn btn-link" href="about.html">About Us</a>
+                            <a class="btn btn-link" href="products.html">Products</a>
+                            <a class="btn btn-link" href="emiral.html">Emiral</a>
+                            <a class="btn btn-link" href="contact.html">Contact</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="text-primary mb-4">Emiral Products</h5>
+                            <a class="btn btn-link" href="#products">Ulcer Elixir</a>
+                            <a class="btn btn-link" href="#products">Detox Tea</a>
+                            <a class="btn btn-link" href="#products">BP Balance Tea</a>
+                            <a class="btn btn-link" href="#products">Desire Tea</a>
+                            <a class="btn btn-link" href="#products">Cleanse Elixir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white border-top border-secondary py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">FemmeEssencia</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Emiral Global - Your Premium Lifestyle Partner
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Gallery Image Change Script -->
+    <script>
+        function changeMainImage(src) {
+            document.getElementById('mainGalleryImage').src = src;
+            // Update active state
+            document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src === src) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
