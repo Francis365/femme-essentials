@@ -1,92 +1,57 @@
 {
   "products": [
     {
-      "image": "shared_images/screenshot-2025-10-01-at-21.44.08.png",
-      "filename": "tester",
-      "name": "Tested guy",
-      "category": "Perfume",
-      "description": "ggtvyg",
-      "price_ngn": 200000
-    },
-    {
       "filename": "IMG_20250929_100606.jpg",
-      "name": "Silky Lace Front Wigs",
+      "name": "Joy Reap Wig",
       "category": "Wigs",
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "46.00",
-      "image": "shared_images/IMG_20250929_100606.jpg"
+      "image": "shared_images/IMG_20250929_100606.jpg",
+      "price_ngn": 35000
     },
     {
       "filename": "IMG_20250929_100730.jpg",
-      "name": "Premium Floral",
-      "category": "Perfume",
-      "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
+      "name": "Malaysian Lumia Deep Wig",
+      "category": "Wigs",
+      "description": "Best Quality Wig",
       "price": "33.00",
-      "image": "shared_images/IMG_20250929_100730.jpg"
+      "image": "shared_images/whatsapp-image-2025-12-17-at-11.32.27.jpeg",
+      "price_ngn": 40000
     },
     {
       "filename": "IMG_20250929_100911.jpg",
-      "name": "Deluxe Aloe Vera",
-      "category": "Body Lotion",
-      "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
+      "name": "Focus Wig",
+      "category": "Wigs",
+      "description": "Tangle free best quality",
       "price": "21.00",
-      "image": "shared_images/IMG_20250929_100911.jpg"
+      "image": "shared_images/IMG_20250929_100911.jpg",
+      "price_ngn": 50000
     },
     {
       "filename": "IMG_20250929_101044.jpg",
-      "name": "Essential Brightening",
-      "category": "Soap",
-      "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
+      "name": "Youth & Lace 18\"",
+      "category": "Wigs",
+      "description": "Master Mis, Best choice",
       "price": "16.00",
-      "image": "shared_images/IMG_20250929_101044.jpg"
-    },
-    {
-      "filename": "IMG_20250929_101046.jpg",
-      "name": "Signature Brightening Toner",
-      "category": "Skin Care",
-      "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
-      "price": "26.00",
-      "image": "shared_images/IMG_20250929_101046.jpg"
-    },
-    {
-      "filename": "IMG_20250929_101055.jpg",
-      "name": "Classic Nude Palette",
-      "category": "Makeup",
-      "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
-      "price": "21.00",
-      "image": "shared_images/IMG_20250929_101055.jpg"
-    },
-    {
-      "filename": "IMG_20250929_101058.jpg",
-      "name": "Radiant Travel Case",
-      "category": "Accessories",
-      "description": "Practical accessory to complement and elevate your beauty routine.",
-      "price": "18.00",
-      "image": "shared_images/IMG_20250929_101058.jpg"
+      "image": "shared_images/IMG_20250929_101044.jpg",
+      "price_ngn": 30000
     },
     {
       "filename": "IMG_20250929_101232.jpg",
-      "name": "Velvet Bob Wig",
+      "name": "iBeauty Wig",
       "category": "Wigs",
-      "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
+      "description": "Premiuim Quality, 100% Human hair",
       "price": "53.00",
       "image": "shared_images/IMG_20250929_101232.jpg"
     },
     {
       "filename": "IMG_20250929_101339.jpg",
-      "name": "Luxe Gourmand",
-      "category": "Perfume",
-      "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
+      "name": "Chemical Fiber 16''",
+      "category": "Wigs",
+      "description": "Chemical Fiber 16''. Best Quality",
       "price": "40.00",
-      "image": "shared_images/IMG_20250929_101339.jpg"
-    },
-    {
-      "filename": "IMG_20250929_101402.jpg",
-      "name": "Elegant Repair",
-      "category": "Body Lotion",
-      "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
-      "price": "28.00",
-      "image": "shared_images/IMG_20250929_101402.jpg"
+      "image": "shared_images/IMG_20250929_101339.jpg",
+      "price_ngn": 28000
     },
     {
       "filename": "IMG_20250929_101436.jpg",
@@ -194,11 +159,12 @@
     },
     {
       "filename": "IMG_20250929_101700_1.jpg",
-      "name": "Essential Vitamin E",
-      "category": "Body Lotion",
-      "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
+      "name": "ĽUÔDAIS",
+      "category": "Hair Care",
+      "description": "Hair Repair & Scalp Oil Serum",
       "price": "25.00",
-      "image": "shared_images/IMG_20250929_101700_1.jpg"
+      "image": "shared_images/img_20250929_101700_1.jpg",
+      "price_ngn": 1800
     },
     {
       "filename": "IMG_20250929_101707.jpg",
@@ -783,14 +749,6 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "31.00",
       "image": "shared_images/IMG_20250929_103854.jpg"
-    },
-    {
-      "image": "/shared_images/screenshot-2025-10-01-at-21.44.08.png",
-      "filename": "screenshot1",
-      "name": "THis is a screenshot test",
-      "category": "Wigs",
-      "description": "This is really working well",
-      "price": 100
     }
   ]
 }
