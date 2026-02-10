@@ -124,7 +124,8 @@
       "category": "Soap",
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "17.00",
-      "image": "shared_images/IMG_20250929_101611.jpg"
+      "image": "shared_images/IMG_20250929_101611.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101631.jpg",
@@ -133,7 +134,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "35.00",
       "image": "shared_images/IMG_20250929_101631.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101700_1.jpg",
@@ -151,7 +153,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "11.00",
       "image": "shared_images/IMG_20250929_101707.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101723.jpg",
@@ -160,7 +163,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "16.00",
       "image": "shared_images/IMG_20250929_101723.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101757.jpg",
@@ -169,7 +173,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "15.00",
       "image": "shared_images/IMG_20250929_101757.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101810.jpg",
@@ -177,7 +182,8 @@
       "category": "Hair Care",
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "18.00",
-      "image": "shared_images/IMG_20250929_101810.jpg"
+      "image": "shared_images/IMG_20250929_101810.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101815.jpg",
@@ -186,7 +192,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "74.00",
       "image": "shared_images/IMG_20250929_101815.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101829.jpg",
@@ -195,7 +202,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "15.00",
       "image": "shared_images/IMG_20250929_101829.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101843.jpg",
@@ -204,7 +212,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "18.00",
       "image": "shared_images/IMG_20250929_101843.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101851.jpg",
@@ -213,7 +222,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "23.00",
       "image": "shared_images/IMG_20250929_101851.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101906.jpg",
@@ -222,7 +232,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "22.00",
       "image": "shared_images/IMG_20250929_101906.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101909.jpg",
@@ -231,7 +242,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "25.00",
       "image": "shared_images/IMG_20250929_101909.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101921.jpg",
@@ -240,7 +252,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "81.00",
       "image": "shared_images/IMG_20250929_101921.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101924.jpg",
@@ -248,7 +261,8 @@
       "category": "Body Lotion",
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "68.00",
-      "image": "shared_images/IMG_20250929_101924.jpg"
+      "image": "shared_images/IMG_20250929_101924.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101927.jpg",
@@ -257,7 +271,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "22.00",
       "image": "shared_images/IMG_20250929_101927.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101929.jpg",
@@ -266,7 +281,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "12.00",
       "image": "shared_images/IMG_20250929_101929.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101937.jpg",
@@ -275,7 +291,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "30.00",
       "image": "shared_images/IMG_20250929_101937.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101941.jpg",
@@ -284,7 +301,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "29.00",
       "image": "shared_images/IMG_20250929_101941.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101945.jpg",
@@ -293,7 +311,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "11.00",
       "image": "shared_images/IMG_20250929_101945.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101949.jpg",
@@ -302,7 +321,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "88.00",
       "image": "shared_images/IMG_20250929_101949.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102001.jpg",
@@ -311,7 +331,8 @@
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "75.00",
       "image": "shared_images/IMG_20250929_102001.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102007.jpg",
@@ -320,7 +341,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "12.00",
       "image": "shared_images/IMG_20250929_102007.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102011.jpg",
@@ -329,7 +351,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "6.00",
       "image": "shared_images/IMG_20250929_102011.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102015.jpg",
@@ -338,7 +361,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "37.00",
       "image": "shared_images/IMG_20250929_102015.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102210.jpg",
@@ -347,7 +371,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "95.00",
       "image": "shared_images/IMG_20250929_102210.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102214.jpg",
@@ -356,7 +381,8 @@
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "82.00",
       "image": "shared_images/IMG_20250929_102214.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102218.jpg",
@@ -365,7 +391,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "19.00",
       "image": "shared_images/IMG_20250929_102218.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102223.jpg",
@@ -374,7 +401,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "13.00",
       "image": "shared_images/IMG_20250929_102223.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102226.jpg",
@@ -382,7 +410,8 @@
       "category": "Hair Care",
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "44.00",
-      "image": "shared_images/IMG_20250929_102226.jpg"
+      "image": "shared_images/IMG_20250929_102226.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102234.jpg",
@@ -390,7 +419,8 @@
       "category": "Hair Care",
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "16.00",
-      "image": "shared_images/IMG_20250929_102234.jpg"
+      "image": "shared_images/IMG_20250929_102234.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102243.jpg",
@@ -398,7 +428,8 @@
       "category": "Hair Care",
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "25.00",
-      "image": "shared_images/IMG_20250929_102243.jpg"
+      "image": "shared_images/IMG_20250929_102243.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102311.jpg",
@@ -407,7 +438,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "26.00",
       "image": "shared_images/IMG_20250929_102311.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102314.jpg",
@@ -416,7 +448,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "7.00",
       "image": "shared_images/IMG_20250929_102314.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102426.jpg",
@@ -425,7 +458,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "20.00",
       "image": "shared_images/IMG_20250929_102426.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102450.jpg",
@@ -434,7 +468,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "23.00",
       "image": "shared_images/IMG_20250929_102450.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102510.jpg",
@@ -443,7 +478,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "11.00",
       "image": "shared_images/IMG_20250929_102510.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102514.jpg",
@@ -452,7 +488,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "109.00",
       "image": "shared_images/IMG_20250929_102514.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102517.jpg",
@@ -461,7 +498,8 @@
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "35.00",
       "image": "shared_images/IMG_20250929_102517.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102519.jpg",
@@ -470,7 +508,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "16.00",
       "image": "shared_images/IMG_20250929_102519.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102530.jpg",
@@ -479,7 +518,8 @@
       "description": "Gentle cleansing formula suitable for everyday use leaving skin fresh and clean.",
       "price": "14.00",
       "image": "shared_images/IMG_20250929_102530.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102537.jpg",
@@ -488,7 +528,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "27.00",
       "image": "shared_images/IMG_20250929_102537.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102633.jpg",
@@ -497,7 +538,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "30.00",
       "image": "shared_images/IMG_20250929_102633.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102904.jpg",
@@ -506,7 +548,8 @@
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "42.00",
       "image": "shared_images/IMG_20250929_102904.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_102929_2.jpg",
@@ -515,7 +558,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "34.00",
       "image": "shared_images/IMG_20250929_102929_2.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103004.jpg",
@@ -524,7 +568,8 @@
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "123.00",
       "image": "shared_images/IMG_20250929_103004.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103016.jpg",
@@ -532,7 +577,8 @@
       "category": "Hair Care",
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "49.00",
-      "image": "shared_images/IMG_20250929_103016.jpg"
+      "image": "shared_images/IMG_20250929_103016.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103052.jpg",
@@ -541,7 +587,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "41.00",
       "image": "shared_images/IMG_20250929_103052.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103058.jpg",
@@ -550,7 +597,8 @@
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "17.00",
       "image": "shared_images/IMG_20250929_103058.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103101.jpg",
@@ -559,7 +607,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "11.00",
       "image": "shared_images/IMG_20250929_103101.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103111.jpg",
@@ -568,7 +617,8 @@
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "56.00",
       "image": "shared_images/IMG_20250929_103111.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103111_1.jpg",
@@ -577,7 +627,8 @@
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "20.00",
       "image": "shared_images/IMG_20250929_103111_1.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103150.jpg",
@@ -586,7 +637,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "18.00",
       "image": "shared_images/IMG_20250929_103150.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103307.jpg",
@@ -595,7 +647,8 @@
       "description": "Targeted treatment formulated to support a healthy, glowing complexion.",
       "price": "24.00",
       "image": "shared_images/IMG_20250929_103307.jpg",
-      "price_ngn": 0
+      "price_ngn": 0,
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_103854.jpg",
@@ -603,7 +656,8 @@
       "category": "Hair Care",
       "description": "Beauty essential designed for smooth application and comfortable, lasting wear.",
       "price": "31.00",
-      "image": "shared_images/IMG_20250929_103854.jpg"
+      "image": "shared_images/IMG_20250929_103854.jpg",
+      "price_on_request": true
     }
   ]
 }
