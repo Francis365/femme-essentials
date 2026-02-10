@@ -88,7 +88,8 @@
       "description": "Practical accessory to complement and elevate your beauty routine.",
       "price": "25.00",
       "image": "shared_images/IMG_20250929_101546.jpg",
-      "price_ngn": ""
+      "price_ngn": "",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101553.jpg",
@@ -96,7 +97,8 @@
       "category": "Accessories",
       "description": "Soft-touch fibers with natural movement and a breathable cap for all-day comfort.",
       "price": "60.00",
-      "image": "shared_images/IMG_20250929_101553.jpg"
+      "image": "shared_images/IMG_20250929_101553.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101557.jpg",
@@ -104,7 +106,8 @@
       "category": "Perfume",
       "description": "Refined fragrance with balanced top, heart and base notes for an elegant finish.",
       "price": "47.00",
-      "image": "shared_images/IMG_20250929_101557.jpg"
+      "image": "shared_images/IMG_20250929_101557.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101600.jpg",
@@ -112,7 +115,8 @@
       "category": "Perfume",
       "description": "Daily moisturizer that absorbs quickly and leaves skin silky and nourished.",
       "price": "18.00",
-      "image": "shared_images/IMG_20250929_101600.jpg"
+      "image": "shared_images/IMG_20250929_101600.jpg",
+      "price_on_request": true
     },
     {
       "filename": "IMG_20250929_101611.jpg",
