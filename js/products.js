@@ -1,6 +1,6 @@
 (function () {
   // Display-only catalog configuration
-  var CONTACT_EMAIL = "info@femme-essentials.com";
+  var CONTACT_EMAIL = "";
   var CONTACT_PHONE = "+2348036114891";
 
   // Currency display helper (no conversion). If NGN amount exists, format it; otherwise show raw numeric.
@@ -149,7 +149,6 @@
     if (!banner) return;
     banner.innerHTML = '<div class="alert alert-info mb-4">' +
       '<strong>Contact to purchase:</strong> ' +
-      '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
       '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>' +
       '</div>';
   }
@@ -187,7 +186,6 @@
         : '';
     var fallbackSrc = (p.fallback || ('shared_images/' + p.filename));
     container.innerHTML = '\n<div class="row g-4">\n  <div class="col-md-6">\n    <img src="' + primary + '" onerror="this.onerror=null;this.src=\'' + fallbackSrc + '\';" alt="' + p.name + '" class="img-fluid rounded shadow product-detail-img"/>\n  </div>\n  <div class="col-md-6">\n    <h6 class="text-primary text-uppercase">' + p.category + '</h6>\n    <h2 class="mb-2">' + p.name + '</h2>\n    <div class="h4 text-dark mb-3">' + priceHtml + '</div>\n    <p class="mb-4">' + p.description + '</p>\n    <div class="mb-4 p-3 bg-light border rounded">\n      <strong>Contact to purchase:</strong> ' +
-      '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> &nbsp;|&nbsp; ' +
       '<a href="tel:+2348036114891">' + CONTACT_PHONE + '</a>\n    </div>\n    <a href="products.html" class="btn btn-dark me-2">Back to Products</a>\n  </div>\n</div>';
 
   }
