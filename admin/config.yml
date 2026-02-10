@@ -50,4 +50,5 @@ collections:
               - { label: "Category", name: "category", widget: "select", options: ["Wigs","Hair Care","Perfume","Body Lotion","Soap","Skin Care","Makeup","Accessories"] }
               - { label: "Description", name: "description", widget: "text" }
 
+              - { label: "Price on Request", name: "price_on_request", widget: "boolean", default: false, required: false }
               - { label: "Price (NGN)", name: "price_ngn", widget: "number", value_type: "int", min: 0, step: 1, required: false }
