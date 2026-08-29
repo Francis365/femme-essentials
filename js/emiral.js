@@ -124,7 +124,12 @@
     window.addEventListener("scroll", updateHeader, { passive: true });
 
     var revealItems = document.querySelectorAll("[data-reveal]");
-    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var showAll = function () { revealItems.forEach(function (item) { item.classList.add("is-visible"); }); };
+    var animates = "IntersectionObserver" in window &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+        !window.location.hash;
+
+    if (animates) {
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -134,8 +139,24 @@
             });
         }, { threshold: 0.12 });
         revealItems.forEach(function (item) { observer.observe(item); });
+        // The browser can restore a scroll position past items the observer has not
+        // reported yet, which would leave the landing screen blank.
+        var revealInView = function () {
+            revealItems.forEach(function (item) {
+                if (item.classList.contains("is-visible")) return;
+                if (item.getBoundingClientRect().top < window.innerHeight) {
+                    item.classList.add("is-visible");
+                    observer.unobserve(item);
+                }
+            });
+        };
+        revealInView();
+        window.addEventListener("load", revealInView);
+        // Arriving on a deep link such as emiral.html#detox-tea lands mid-page, so drop
+        // the animation entirely rather than risk showing an empty screen.
+        window.addEventListener("hashchange", showAll);
     } else {
-        revealItems.forEach(function (item) { item.classList.add("is-visible"); });
+        showAll();
     }
 
     document.querySelectorAll("[data-year]").forEach(function (item) {
