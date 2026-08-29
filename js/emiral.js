@@ -4,6 +4,10 @@
     var CAMPAIGN_REFERENCE = "EM-NG-SEARCH";
     var WHATSAPP_NUMBER = "2348036114891";
     var CONSENT_KEY = "femme_measurement_consent_v1";
+    var CONVERSION_DESTINATIONS = {
+        phone: "AW-11335982502/hBcPCKXniuocEKa7tZ0q",
+        whatsapp: "AW-11335982502/SWUmCKjniuocEKa7tZ0q"
+    };
     var tagMeta = document.querySelector('meta[name="google-ads-tag"]');
     var tagId = tagMeta ? tagMeta.content.trim() : "";
 
@@ -57,10 +61,10 @@
 
     function trackOrderStart(channel) {
         if (savedConsent() !== "granted" || !hasValidTagId()) return;
-        window.gtag("event", channel === "phone" ? "phone_order_start" : "whatsapp_order_start", {
-            campaign_ref: CAMPAIGN_REFERENCE,
-            contact_method: channel,
-            send_to: tagId
+        var destination = CONVERSION_DESTINATIONS[channel];
+        if (!destination) return;
+        window.gtag("event", "conversion", {
+            send_to: destination
         });
     }
 
